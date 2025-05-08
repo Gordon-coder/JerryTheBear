@@ -3,7 +3,7 @@ from rest_framework import routers
 from api import views
 
 router = routers.DefaultRouter()
-router.register(r'merchandises', views.GetMerchandiseViews, 'merchandise')
+router.register('merchandises', views.GetMerchandiseViews, 'merchandise')
 
 urlpatterns = [
     path('', include(router.urls))  # List all merchandise items

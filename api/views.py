@@ -5,7 +5,7 @@ from .serializers import MerchandiseSerializer
 from rest_framework import viewsets
 
 # Create your views here.
-class GetMerchandiseViews(viewsets.ViewSet):
+class GetMerchandiseViews(viewsets.ModelViewSet):
     serializer_class = MerchandiseSerializer
     queryset = Merchandise.objects.all()
     
