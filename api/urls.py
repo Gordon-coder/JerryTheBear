@@ -6,5 +6,6 @@ router = routers.DefaultRouter()
 router.register('merchandises', views.GetMerchandiseViews, 'merchandise')
 
 urlpatterns = [
-    path('', include(router.urls))  # List all merchandise items
+    path('', include(router.urls)),  # List all merchandise items
+    
 ]
