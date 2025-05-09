@@ -5,38 +5,49 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.selection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.arrow {
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.arrow:hover {
+  transform: scale(1.2);
 }
 
-.card {
-  padding: 2em;
+.merch-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
+  
 }
 
-.read-the-docs {
-  color: #888;
+.merch-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1em;
+  margin: 1em 0;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.merch-item img {
+  border-radius: 8px;
+}
+
+.merch-item:hover {
+  transform: scale(1.04);
+  cursor: pointer;
+}
+
+.merch-item h3 {
+  font-weight: bold;
 }

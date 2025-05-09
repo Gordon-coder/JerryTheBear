@@ -15,13 +15,15 @@ function App() {
   }, [])
 
   return (
-    <div>
-      {merch.map(item => (
-        <div key={item.id} className="merch-item">
-          <h3>{item.name}</h3>
-          <img src={item.image} alt={item.name} />
-        </div>
-      ))}
+    <div className="selection">
+      <div className="merch-container">
+        {merch.map(item => (
+          <div key={item.id} className="merch-item">
+            <h3>{item.name}</h3>
+            <img src={item.image} alt={item.name} width={350} />
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
