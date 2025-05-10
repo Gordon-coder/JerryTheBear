@@ -4,6 +4,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
+
 .navbar-brand {
   cursor: pointer;
   overflow-x: hidden;
@@ -43,4 +44,24 @@ body {
 
 .card:hover {
   transform: scale(1.05);
+}
+
+.showroom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.merch-img {
+  border-radius: 10px;
+  max-width: 300px;
+  margin: 20px;
+}
+
+.price {
+  text-align: right;
+}
+
+.form {
+  margin: 20px;
 }
