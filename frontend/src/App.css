@@ -4,35 +4,14 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  width: auto;
-  align-items: center;
-  padding: 20px 2% 20px 2%;
-  margin: 0;
-  background-color: #f8f9fa;
-  border-radius: 8px;
+.navbar-brand {
+  cursor: pointer;
+  overflow-x: hidden;
+  z-index: 100;
 }
 
-.navbar-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 2rem;
-  justify-content: right;
-  align-items: right;
-}
-
-.navbar-links a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  transition: all 0.5s ease;
-}
-.navbar-links a:hover {
-  color: #007bff;
+.navbar-item {
+  cursor: pointer;
 }
 
 #merch {
@@ -55,6 +34,7 @@ body {
   width:300px;
   border-radius: 20px;
   transition: all 0.2s ease;
+  cursor: pointer;
 }
 
 .card-img-top {
