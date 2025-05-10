@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import Navbar from './Navbar.tsx'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 
 function App() {
@@ -15,16 +17,22 @@ function App() {
   }, [])
 
   return (
-    <div className="selection">
-      <div className="merch-container">
-        {merch.map(item => (
-          <div key={item.id} className="merch-item">
-            <h3>{item.name}</h3>
-            <img src={item.image} alt={item.name} width={350} />
-          </div>
-        ))}
+    <>
+      <Navbar />
+      <div id="merch">
+        <div className="merch-container">
+          {merch.map(item => (
+            <div key={item.id} className="card merch-item" onClick={() => window.location.href = `/merchandises/${item.id}`}>
+              <img src={item.image} alt={item.name} width={300} className='card-img-top'/>
+              <div className="card-body">
+                <h5 className="card-title">{item.name}</h5>
+                <p className="card-text">${item.price}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 
