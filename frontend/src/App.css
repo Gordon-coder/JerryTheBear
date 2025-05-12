@@ -65,3 +65,8 @@ body {
 .form {
   margin: 20px;
 }
+
+.response {
+  text-align: center;
+  margin: 20px;
+}

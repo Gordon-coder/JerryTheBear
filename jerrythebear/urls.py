@@ -16,13 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from home import urls as home_urls
 from api import urls as api_urls
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(home_urls)),  # Include home app URLs
     path('api/', include(api_urls)),  # Include api app URLs
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
