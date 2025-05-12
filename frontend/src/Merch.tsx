@@ -32,6 +32,7 @@ function Merch() {
         </div>
       </div>
       <form className="form">
+        <input type="hidden" id="merch_id" value={id} />
         <div className="form-floating mb-3">
           <input type="text" className="form-control" id="name" placeholder="Enter your name" />
           <label htmlFor="name" className="form-label">Name: </label>
@@ -41,7 +42,7 @@ function Merch() {
           <label htmlFor="phone" className="form-label">Phone number: </label>
         </div>
         <div className="form-floating mb-3">
-          <input type="number" className="form-control" id="amount" placeholder="Enter amount" onChange={(e) => setAmount(Number(e.target.value))} value="0"/>
+          <input type="number" className="form-control" id="amount" placeholder="Enter amount" onChange={(e) => setAmount(Number(e.target.value))}/>
           <label htmlFor="amount" className="form-label">Amount: </label>
         </div>
         <div className="d-flex justify-content-between">

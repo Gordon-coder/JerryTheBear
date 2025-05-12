@@ -9,3 +9,12 @@ class Merchandise(models.Model):
 
     def __str__(self):
         return self.name
+    
+class Order(models.Model):
+    merchandise = models.ForeignKey(Merchandise, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+    quantity = models.IntegerField()
+    phone_number = models.CharField(max_length=8)
+
+    def __str__(self):
+        return f"Order of {self.quantity} {self.merchandise.name}(s) with phone number {self.phone_number}"
