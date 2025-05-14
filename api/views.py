@@ -14,7 +14,7 @@ class GetOrderViews(viewsets.ModelViewSet):
 
 def order_item(request):
     if request.method == 'POST':
-        return HttpResponse("Invalid request method.")
+        return HttpResponse("Invalid request method.", status=405)
     
     merchandise_id = request.GET.get('merch_id')
     name = request.GET.get('name')
@@ -22,11 +22,15 @@ def order_item(request):
     phone_number = request.GET.get('phone')
 
     # Validate the input data
-    if not merchandise_id or not name or not quantity or not phone_number:
-        return HttpResponse("Missing required fields.")
+    if not name:
+        return HttpResponse("Name is required.", status=400)
+    if not quantity:
+        return HttpResponse("Quantity is required.", status=400)
+    if not phone_number:
+        return HttpResponse("Phone number is required.", status=400)
 
     # Create a new order
     order = Order(merchandise_id=merchandise_id, name=name, quantity=quantity, phone_number=phone_number)
     order.save()
 
-    return HttpResponse("Order placed successfully.")
+    return HttpResponse("Order placed successfully, you will be contacted shortly on Whatsapp for payment.", status=200)
