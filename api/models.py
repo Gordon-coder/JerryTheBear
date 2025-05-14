@@ -15,6 +15,8 @@ class Order(models.Model):
     name = models.CharField(max_length=100)
     quantity = models.IntegerField()
     phone_number = models.CharField(max_length=8)
+    resolved = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"Order of {self.quantity} {self.merchandise.name}(s) with phone number {self.phone_number}"
+        return f"Order of {self.quantity} {self.merchandise.name}(s) with phone number {self.phone_number} created at {self.created_at}"
